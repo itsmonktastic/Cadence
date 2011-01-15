@@ -10,6 +10,18 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\heightmap.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\hmimagesource.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\iheightmap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\heightmap.h" />
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\heightmapsource.h" />
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\hmdatasource.h" />
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\hmimagesource.h" />
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\iheightmap.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6B60751-CB23-4787-ACA9-4374D58A6563}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -32,29 +44,38 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>libcadence_heightmap</TargetName>
+    <TargetExt>.so</TargetExt>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\..\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Release;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_heightmap</TargetName>
+    <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDHEIGHTMAP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDHEIGHTMAP_EXPORTS;BUILD_HEIGHTMAP_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(LibCadence).lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;libcadence_wgd_base_3d.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,15 +92,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Cadence Library.lib;WGD Base.lib;WGD Resources Base.lib;WGD Base 3D.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(LibCadence).lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;libcadence_wgd_base_3d.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\heightmap.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\hmdatasource.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\hmimagesource.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\iheightmap.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

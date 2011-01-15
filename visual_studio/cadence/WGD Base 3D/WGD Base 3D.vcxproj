@@ -10,6 +10,31 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\base3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\camera3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\frustum.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\iline.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\instance3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\iprimitive.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\isprite3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\render.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\scene3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\sprite3d.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\text3d.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\camera3d.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\frustum.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\iline.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\instance3d.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\iprimitive.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\isprite3d.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\render.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\scene3d.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\sprite3d.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\text3d.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D84683AF-BD06-4ADD-BB70-CC52BCC37933}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -32,29 +57,38 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Debug;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_wgd_base_3d</TargetName>
+    <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\..\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Release;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_wgd_base_3d</TargetName>
+    <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDBASE3D_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDBASE3D_EXPORTS;BUILD_BASE3D_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcadence.lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,22 +105,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Cadence Library.lib;WGD Base.lib;WGD Resources Base.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcadence.lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\base3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\camera3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\frustum.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\iline.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\instance3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\iprimitive.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\isprite3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\render.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\scene3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\sprite3d.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\text3d.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

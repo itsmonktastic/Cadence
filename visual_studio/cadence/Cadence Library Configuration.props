@@ -15,6 +15,7 @@
     <WgdBase3d>wgd_base_3d</WgdBase3d>
     <WgdBase3dDir>$(CadenceModules)$(WgdBase3d)\</WgdBase3dDir>
     <MocHelper>$(SolutionDir)moc_helper.bat</MocHelper>
+    <CadenceIncludes>$(CadenceDir)include\;$(CadenceModulesDir)ui\include\;$(CadenceModulesDir)wgd_base\include\;$(CadenceModulesDir)wgd_base_2d\include\;$(CadenceModulesDir)wgd_base_3d\include\;$(CadenceModulesDir)wgd_heightmap\include\;$(CadenceModulesDir)wgd_input\include\;$(CadenceModulesDir)wgd_models\include\;$(CadenceModulesDir)wgd_resources_base\include\;$(CadenceModulesDir)wgd_widgets\include\;$(CadenceModulesDir)xnet\include\;$(CadenceModulesDir)basic_agents\include\;</CadenceIncludes>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
@@ -67,6 +68,10 @@
     </BuildMacro>
     <BuildMacro Include="MocHelper">
       <Value>$(MocHelper)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CadenceIncludes">
+      <Value>$(CadenceIncludes)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>

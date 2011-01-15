@@ -10,6 +10,33 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\animationcontroller.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\animationset.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\bone.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\clipmap.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\imodel.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\mesh.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\model.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\model3ds.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\modelx.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\morphcontroller.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\include\wgd\skincontroller.h" />
+    <ClInclude Include="..\..\..\modules\wgd_models\src\collision.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\wgd_models\src\animationcontroller.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\animationset.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\clipmap.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\collision.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\imodel.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\mesh.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\model.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\model3ds.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\modelx.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\morphcontroller.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_models\src\skincontroller.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F6A2FB2D-2E0B-4A4A-9BE6-CC8B414CBFA0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -32,29 +59,38 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>libcadence_wgd_models</TargetName>
+    <TargetExt>.so</TargetExt>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)\..\..\..\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(CadenceIncludes);$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\..\Release;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_wgd_models</TargetName>
+    <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDMODELS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDMODELS_EXPORTS;BUILD_MODELS_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(LibCadence).lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;libcadence_wgd_base_3d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,25 +107,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Cadence Library.lib;WGD Base.lib;WGD Resources Base.lib;WGD Base 3D.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(LibCadence).lib;libcadence_wgd_base.lib;libcadence_wgd_resources_base.lib;libcadence_wgd_base_3d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_models\animationcontroller.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\animationset.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\clipmap.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\collision.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\imodel.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\mesh.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\model.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\model3ds.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\modelx.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\morphcontroller.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_models\skincontroller.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\modules\wgd_models\collision.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

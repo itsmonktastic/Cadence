@@ -70,7 +70,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>cadence_wgd_base</TargetName>
+    <TargetName>libcadence_wgd_base</TargetName>
     <TargetExt>.so</TargetExt>
     <IncludePath>$(CadenceModulesDir)wgd_base\include;$(CadenceDir)include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)..\Debug\;$(LibraryPath)</LibraryPath>
@@ -79,7 +79,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(CadenceModulesDir)wgd_base\include;$(CadenceDir)include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)..\Release;$(LibraryPath)</LibraryPath>
-    <TargetName>cadence_wgd_base</TargetName>
+    <TargetName>libcadence_wgd_base</TargetName>
     <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

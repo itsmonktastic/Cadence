@@ -15,113 +15,187 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\font.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\material.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\png.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\png.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngerror.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngerror.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pnggccrd.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pnggccrd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngget.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngmem.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngmem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngpread.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngpread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngread.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrio.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngrio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrtran.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngrtran.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrutil.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngrutil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngset.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngset.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngtest.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngtest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngtrans.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\png\pngtrans.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\rendertarget.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\rendertarget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\resources_base.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\resources_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\scenegraph.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\scenegraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\shader.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\sprite.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\spritefont.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\spritefont.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\texture.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturebmp.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\texturebmp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturepng.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\texturepng.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturetga.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\texturetga.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\adler32.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\adler32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\compress.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\compress.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\crc32.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\crc32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\deflate.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\deflate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\infback.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\infback.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inffast.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\inffast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inflate.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\inflate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inftrees.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\inftrees.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\trees.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\trees.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\uncompr.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\uncompr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\zutil.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\src\zlib\zutil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\png\png.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\png\pngconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\rendertarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\scenegraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\spritefont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\texturebmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\texturepng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\texturetga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\deflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\inffast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\inffixed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\inflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\inftrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\trees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\zconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\zlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_resources_base\include\wgd\zlib\zutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

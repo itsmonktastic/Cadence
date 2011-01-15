@@ -15,38 +15,70 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\base3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\base3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\camera3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\camera3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\frustum.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\frustum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\iline.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\iline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\instance3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\instance3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\iprimitive.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\iprimitive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\isprite3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\isprite3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\render.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\scene3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\scene3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\sprite3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\sprite3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base_3d\text3d.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base_3d\src\text3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\camera3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\frustum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\iline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\instance3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\iprimitive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\isprite3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\scene3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\sprite3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_base_3d\include\wgd\text3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,17 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\heightmap.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\heightmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\hmdatasource.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\hmimagesource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\hmimagesource.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_heightmap\src\iheightmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_heightmap\iheightmap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\heightmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\heightmapsource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\hmdatasource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\hmimagesource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\wgd_heightmap\include\wgd\iheightmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
