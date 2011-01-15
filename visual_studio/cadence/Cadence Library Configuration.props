@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CadenceDir>$(ProjectDir)..\..\..\libcadence\</CadenceDir>
+    <QtIncludes>$(QtDir)include\;$(QtDir)include\QtCore\;$(QtDir)include\QtGui\</QtIncludes>
+    <LibCadence>libcadence</LibCadence>
+    <CadenceModulesDir>$(ProjectDir)..\..\..\modules\</CadenceModulesDir>
+    <WgdBaseDir>$(CadenceModulesDir)$(WgdBase)\</WgdBaseDir>
+    <WgdBase>wgd_base</WgdBase>
+    <WgdResourcesBaseDir>$(CadenceModulesDir)$(WgdResourcesBase)\</WgdResourcesBaseDir>
+    <WgdResourcesBase>wgd_resources_base</WgdResourcesBase>
+    <WgdBase2dDir>$(CadenceModulesDir)$(WgdBase2d)\</WgdBase2dDir>
+    <WgdBase2d>wgd_base_2d</WgdBase2d>
+    <WgdBase3d>wgd_base_3d</WgdBase3d>
+    <WgdBase3dDir>$(CadenceModules)$(WgdBase3d)\</WgdBase3dDir>
+    <MocHelper>$(SolutionDir)moc_helper.bat</MocHelper>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="CadenceDir">
+      <Value>$(CadenceDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QtIncludes">
+      <Value>$(QtIncludes)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="LibCadence">
+      <Value>$(LibCadence)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CadenceModulesDir">
+      <Value>$(CadenceModulesDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdBaseDir">
+      <Value>$(WgdBaseDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdBase">
+      <Value>$(WgdBase)</Value>
+    </BuildMacro>
+    <BuildMacro Include="WgdResourcesBaseDir">
+      <Value>$(WgdResourcesBaseDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdResourcesBase">
+      <Value>$(WgdResourcesBase)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdBase2dDir">
+      <Value>$(WgdBase2dDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdBase2d">
+      <Value>$(WgdBase2d)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WgdBase3d">
+      <Value>$(WgdBase3d)</Value>
+    </BuildMacro>
+    <BuildMacro Include="WgdBase3dDir">
+      <Value>$(WgdBase3dDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="MocHelper">
+      <Value>$(MocHelper)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

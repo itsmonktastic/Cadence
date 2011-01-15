@@ -9,3 +9,4 @@ autom4te.cache
 cadence
 cadence.bin
 *.a
+!visual_studio/cadence

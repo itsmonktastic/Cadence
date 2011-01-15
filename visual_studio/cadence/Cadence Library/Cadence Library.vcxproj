@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5913CF82-640E-4F4F-A05E-C685FE744883}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CadenceLibrary</RootNamespace>
+    <ProjectName>Cadence Library</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CadenceDir)include;$(IncludePath)</IncludePath>
+    <SourcePath>$(CadenceDir)include;$(SourcePath)</SourcePath>
+    <TargetName>$(LibCadence)</TargetName>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CadenceDir)include;$(IncludePath)</IncludePath>
+    <TargetName>$(LibCadence)</TargetName>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CADENCELIBRARY_EXPORTS;BUILD_XARA_DLL;BUILD_DVM_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>BUILD_XARA_DLL;BUILD_DVM_DLL;WIN32;NDEBUG;_WINDOWS;_USRDLL;CADENCELIBRARY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\libcadence\src\agenthandler.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\cadence.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\dasm.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\directory.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\buffer.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\coid.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\context.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\definition.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\dmsg.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\doste.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\dstring.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libcadence\src\doste\event.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\handler.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\local.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\names.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\number.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\oid.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\processor.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\doste\template.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libcadence\src\doste\virtualobject.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\library\dmsg.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\library\dstring.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\library\file.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\library\stream.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\memory.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\messages.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\module.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\notation.cpp" />
+    <ClCompile Include="..\..\..\libcadence\src\softagent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\libcadence\src\dasm.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\context.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\dll.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\local.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\names.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\number.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\templates.h" />
+    <ClInclude Include="..\..\..\libcadence\src\doste\virtualobject.h" />
+    <ClInclude Include="..\..\..\libcadence\src\module.h" />
+    <ClInclude Include="..\..\..\libcadence\src\softagent.h" />
+    <ClInclude Include="..\..\..\libcadence\src\stack.h" />
+    <ClInclude Include="dir.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

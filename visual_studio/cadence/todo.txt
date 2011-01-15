@@ -1,0 +1,22 @@
+- locate cadence/current documentation (done)
+- build core for windows (done - dll built)
+- figure out where the entry point is and build an executable (done)
+- get correct loading of config.dasm and win32.dasm (done, needed path fix)
+- build/get Qt for windows (done)
+- setup Cadence solution to use a property sheet with $(QT_DIR) defined, for includes,links and MOC (worked around)
+- build ui for windows (done)
+- modify loading scripts to load the correct modules independent of what os they are run on (don't know the syntax)
+- build WGD module (done)
+- figure out what ./configure --enable-eden does (just enables building of eden module)
+- get an example to work (done)
+- visual studio project template for module? would be handy >_<
+- figure out how to make Xnet's use of __attribute__((packed)) work in msvc (use #pragma pack)
+
+== EDEN ==
+- figure out what things require the cygwin POSIX compatibility layer. 
+	are there any that can not be replicated without cygwin?
+	looks like EDEN somehow relies on X libraries, possibly for making a GL context with Sasami? not sure how ttyeden and sasami play
+	not sure whether cadence is using ttyeden or not, conflicting implications in makefiles
+	
+- figure out how hard it is to link against cygwin. :S
+- figure out how to generate svnversion.h

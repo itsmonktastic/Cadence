@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E0255FC-4060-4D00-8D8A-52BF62EE7437}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CadenceUI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(CadenceDir)include;$(QtIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(QtDir)lib;$(ProjectDir)..\Debug;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_ui</TargetName>
+    <TargetExt>.so</TargetExt>
+    <CustomBuildBeforeTargets>Build</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(CadenceDir)include;$(QtIncludes);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Release;$(QtDir)lib;$(LibraryPath)</LibraryPath>
+    <TargetName>libcadence_ui</TargetName>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CADENCEUI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>QtGui4.lib;QtCore4.lib;$(LibCadence).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>echo hihihi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>$(QtDir)bin\moc.exe</Inputs>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>"$(MocHelper)" "$(QtDir)\bin\moc.exe" "$(CadenceModulesDir)ui\src\" "$(ProjectDir)moc\\"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Moc'ing all header files...</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CADENCEUI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>QtGui4.lib;QtCore4.lib;$(LibCadence).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>"$(MocHelper)" "$(QtDir)\bin\moc.exe" "$(CadenceModulesDir)ui\src\" "$(ProjectDir)moc\\"</Command>
+      <Message>Moc'ing all header files...</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\ui\src\browser.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\history.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\inputwindow.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\mainwindow.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\modules.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\msghandler.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\objecttree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\observableviewer.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\syntax.cpp" />
+    <ClCompile Include="..\..\..\modules\ui\src\ui.cpp" />
+    <ClCompile Include="moc\moc_browser.cpp" />
+    <ClCompile Include="moc\moc_history.cpp" />
+    <ClCompile Include="moc\moc_inputwindow.cpp" />
+    <ClCompile Include="moc\moc_mainwindow.cpp" />
+    <ClCompile Include="moc\moc_modules.cpp" />
+    <ClCompile Include="moc\moc_msghandler.cpp" />
+    <ClCompile Include="moc\moc_objecttree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="moc\moc_observableviewer.cpp" />
+    <ClCompile Include="moc\moc_syntax.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\browser.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\dll.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\history.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\inputwindow.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\mainwindow.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\modules.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\msghandler.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\objecttree.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\observableviewer.h" />
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\syntax.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

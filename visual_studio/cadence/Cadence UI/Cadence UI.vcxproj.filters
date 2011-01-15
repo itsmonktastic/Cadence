@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MOC Files">
+      <UniqueIdentifier>{f1039d26-3ead-47b7-94f7-02c6ad8a162a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\ui\src\browser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\history.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\inputwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\modules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\msghandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\objecttree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\observableviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\syntax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ui\src\ui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_browser.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_history.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_inputwindow.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_mainwindow.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_modules.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_msghandler.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_objecttree.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_observableviewer.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc\moc_syntax.cpp">
+      <Filter>MOC Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\syntax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\observableviewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\objecttree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\msghandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\modules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\inputwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\history.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\dll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\browser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

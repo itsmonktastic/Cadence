@@ -1,0 +1,1 @@
+This folder exists to keep the files generated from the MOC tool which is needed for programming with Qt. It is only so it is possible to add the files to visual studio so that they can be built.

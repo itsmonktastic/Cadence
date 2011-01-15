@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{656AC8A3-6563-4510-8E67-6A31CBB9A499}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WGDResourcesBase</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDRESOURCESBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;WGDRESOURCESBASE_EXPORTS;BUILD_RESOURCES_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>WGD Base.lib;Cadence Library.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\font.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\material.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\png.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngerror.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pnggccrd.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngget.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngmem.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngpread.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngread.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrio.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrtran.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngrutil.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngset.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngtest.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\png\pngtrans.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\rendertarget.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\resources_base.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\scenegraph.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\shader.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\sprite.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\spritefont.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\texture.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturebmp.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturepng.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\texturetga.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\adler32.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\compress.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\crc32.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\deflate.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\infback.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inffast.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inflate.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\inftrees.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\trees.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\uncompr.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_resources_base\zlib\zutil.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
