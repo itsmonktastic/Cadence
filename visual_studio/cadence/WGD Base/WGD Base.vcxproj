@@ -10,6 +10,35 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\wgd_base\src\base.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\extensions.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\index.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\input.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\matrix.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\mouse.cpp" />
+    <ClCompile Include="..\..\..\modules\wgd_base\src\window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\camera.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\colour.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\common.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\dll.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\drawable.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\extensions.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\index.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\input.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\iterator.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\keyboard.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\math.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\matrix.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\mouse.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\quaternion.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\scene.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\vector.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\vertex.h" />
+    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\window.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{17E575F2-15A1-4B15-B711-098B1325DDC8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -32,9 +61,11 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Cadence Library Configuration.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -46,17 +77,17 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\..\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(CadenceModulesDir)wgd_base\include;$(CadenceDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Release;$(LibraryPath)</LibraryPath>
     <TargetName>cadence_wgd_base</TargetName>
     <TargetExt>.so</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;WGDBASE_EXPORTS;BUILD_BASE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,38 +112,6 @@
       <AdditionalDependencies>opengl32.lib;glu32.lib;$(LibCadence).lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="..\..\..\modules\wgd_base\Makefile.in" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_base\base.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\extensions.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\index.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\input.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\matrix.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\mouse.cpp" />
-    <ClCompile Include="..\..\..\modules\wgd_base\window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\camera.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\colour.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\common.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\dll.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\drawable.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\extensions.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\index.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\input.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\iterator.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\keyboard.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\math.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\matrix.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\mouse.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\quaternion.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\scene.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\vector.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\vertex.h" />
-    <ClInclude Include="..\..\..\modules\wgd_base\include\wgd\window.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

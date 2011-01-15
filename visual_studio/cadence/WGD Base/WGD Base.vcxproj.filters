@@ -15,30 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\modules\wgd_base\Makefile.in">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\modules\wgd_base\base.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\extensions.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\extensions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\index.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\index.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\input.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\matrix.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\matrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\mouse.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\modules\wgd_base\window.cpp">
+    <ClCompile Include="..\..\..\modules\wgd_base\src\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
