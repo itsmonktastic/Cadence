@@ -48,6 +48,10 @@
 //pthread_attr_t uattr;
 #endif
 
+#ifdef _MSC_VER
+#include <direct.h> // for _getcwd
+#endif
+
 #ifdef WIN32
 #include <windows.h>
 #include <winsock.h>

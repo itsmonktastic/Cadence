@@ -63,7 +63,7 @@ namespace cadence {
 		switch(m.m_type) {
 		case DMsg::WARNING:	SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY); break;
 		case DMsg::ERROR:	SetConsoleTextAttribute(hConsole, FOREGROUND_RED); break;
-		case DMsg::DEBUG:	SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE); break;
+//		case DMsg::DEBUG:	SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE); break;
 		default: break;
 		}
 		#endif

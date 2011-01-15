@@ -213,7 +213,7 @@ namespace cadence {
 		static cadence::Map s_reg;
 		static cadence::List<Object*> s_list;
 	};
-};
+}
 
 template <typename T>
 T *cadence::Object::convert(const OID &o) {
