@@ -1,5 +1,6 @@
 # user specific visual studio config stuff
 *.sdf
+*.opensdf
 *.vcxproj.user
 *.suo
 
