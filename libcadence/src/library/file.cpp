@@ -56,7 +56,12 @@ void LocalFile::initialise() {
 	//Now need to split paths into an array of individual paths.
 	for (int i=0; i<19; i++) {
 		s_path[i] = new char[500];
-		temp = strchr(paths, ':');
+#ifdef WIN32
+		const char path_separator = ';';
+#else
+		const char path_separator = ':';
+#endif
+		temp = strchr(paths, path_separator);
 		if (temp != 0) {
 			strncpy(s_path[i], paths, temp-paths);
 			s_path[i][temp-paths] = 0;
