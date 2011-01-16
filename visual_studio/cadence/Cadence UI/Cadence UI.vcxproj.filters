@@ -77,34 +77,34 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\syntax.h">
+    <ClInclude Include="..\..\..\modules\ui\src\dll.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\observableviewer.h">
+    <ClInclude Include="..\..\..\modules\ui\src\history.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\objecttree.h">
+    <ClInclude Include="..\..\..\modules\ui\src\inputwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\msghandler.h">
+    <ClInclude Include="..\..\..\modules\ui\src\mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\modules.h">
+    <ClInclude Include="..\..\..\modules\ui\src\modules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\mainwindow.h">
+    <ClInclude Include="..\..\..\modules\ui\src\msghandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\inputwindow.h">
+    <ClInclude Include="..\..\..\modules\ui\src\objecttree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\history.h">
+    <ClInclude Include="..\..\..\modules\ui\src\observableviewer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\dll.h">
+    <ClInclude Include="..\..\..\modules\ui\src\syntax.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cadence_backup\Cadence\modules\ui\browser.h">
+    <ClInclude Include="..\..\..\modules\ui\src\browser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

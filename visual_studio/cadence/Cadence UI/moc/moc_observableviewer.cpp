@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'observableviewer.h'
 **
-** Created: Sat 15. Jan 20:48:40 2011
+** Created: Sun 16. Jan 01:38:23 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.1)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -3,6 +3,7 @@
 #include "inputwindow.h"
 #include "mainwindow.h"
 #include "msghandler.h"
+#include "dll.h"
 
 using namespace cadence;
 using namespace cadence::doste;
@@ -10,7 +11,7 @@ using namespace cadence::doste;
 QApplication *qtapp=0;
 int argc = 0;
 
-extern "C" void initialise(const cadence::doste::OID &base) {
+extern "C" void UIIMPORT initialise(const cadence::doste::OID &base) {
 	qtapp = new QApplication(argc,0);
 
 	//new MsgAgent(base);
@@ -20,10 +21,10 @@ extern "C" void initialise(const cadence::doste::OID &base) {
 	mainwin->show();
 }
 
-extern "C" void cadence_update() {
+extern "C" void UIIMPORT cadence_update() {
 	if (qtapp) qtapp->processEvents();
 }
 
-extern "C" void finalise() {
+extern "C" void UIIMPORT finalise() {
 	delete qtapp;
 }
