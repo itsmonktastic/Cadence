@@ -100,7 +100,9 @@ Module::Module(const OID &obj)
 	if (m_update == 0)
 		m_update = dlsym(m_handle, "update");
 	#else
-	m_update = (void*)GetProcAddress(m_handle, "update");
+	m_update = (void*)GetProcAddress(m_handle, "cadence_update");
+	if (m_update == 0)
+		m_update = (void*)GetProcAddress(m_handle, "update");
 	#endif
 	//m_docreate = true;
 	
