@@ -46,8 +46,12 @@ LocalFile::~LocalFile() {
 }
 
 void LocalFile::initialise() {
-	char *paths = getenv("CADENCE_PATH");
-	char *temp;
+	const char *paths = getenv("CADENCE_PATH");
+	if (!paths) {
+		paths = ".";
+	}
+
+	const char *temp;
 	
 	//Now need to split paths into an array of individual paths.
 	for (int i=0; i<19; i++) {
@@ -55,6 +59,7 @@ void LocalFile::initialise() {
 		temp = strchr(paths, ':');
 		if (temp != 0) {
 			strncpy(s_path[i], paths, temp-paths);
+			s_path[i][temp-paths] = 0;
 			paths = temp+1;
 		} else {
 			strcpy(s_path[i], paths);
